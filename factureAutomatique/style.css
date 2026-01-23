@@ -1,94 +1,83 @@
-html {
-    background-color: aqua;
-}
-
-#main {
+legend{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    justify-content: space-between;
 }
-
-#gauche {
-    background-color: lightgrey;
-    flex:2;
+.legend input{
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
-
-#droite {
+form{
+    display: flex;
+}
+.form{
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    border: 2px solid black;
     background-color: white;
-    flex:3;
+}
+label{
+    display: inline-block;
+    width: 155px;
+    padding: 10px 50px 10px 20px;
+    font-weight: bold;
 }
 
-.mesdivs {
+form input{
+    width: 200px;
+    padding: 5px;
+    margin-left: 40px;
+}
+label input{
+    width: 30px;
+    
+}
+body{
+    display: flex;
+    gap: 25px;
+    background-color: rgba(71, 176, 224, 0.123);
+    margin: 50px 50px;
+}
+thead{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+th{
+  width: 100px; 
+  padding: 10px 5px;
+  border: 1px solid black;
+}
+td{
+    padding: 10px 5px;
     border: 1px solid black;
-    margin: 10px;
-    padding: 10px;
-} 
-
-#entete{
-    display: flex;
-    flex-direction: column;
-    background-color: beige;
-    padding: 10px;
 }
-
-#entete > p {
-    align-self: center;
+table{
+    border-collapse: collapse;
 }
-
-#enhaut{
-    display: flex;
-    justify-content: space-between;
-}
-#enbas{
-    display: flex;
-    justify-content: space-between;
-}
-
-.elementsfac {
-    display: flex;
-    flex-direction: column;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
-    margin: 10px;
-
-
-}
-
-.elementsfac > div {
-    display: flex;
-    margin-bottom: 5px;
-    justify-content: space-between;
-}
-
-.elementsfac > div > input{
-    width: 50%;
-}
-
-.elementsfac > div > label{
-    width: 50%;
-}
-
-
- 
-input[name="tauxremise"], input[name="tauxescompte"], input[name="tauxtva"] {
-    width: 35px;
-}
-
-#nap {
-    border: none;
-}
-
-#roundmidbtn{
-
-    position: absolute;
+button{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 100px;
+    width: 100px;
+    margin: 250px 50px;
     border-radius: 100%;
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    top: 50%;
-    background-color: aqua;
-    border: 1px solid;
-
+    box-shadow: 0 0 10px rgb(94, 92, 92) ;
+}
+input:focus{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px black;
+}
+.tableau{
+    background-color: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    text-align: center;
 }

@@ -1,114 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <title>Facture Automatique</title>
-  </head>
-  <body>
-    <div id="main">
-      <div class="mesdivs" id="gauche">
-        <div id="facture">
-          <div id="entete">
-            <div id="enhaut">
-              <input
-                type="text"
-                name="fournisseur"
-                id="fournisseur"
-                placeholder="Fournisseur"
-              />
-              <input type="date" name="date" id="date" />
-            </div>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form action="" id="formulaire">
+        <div class="form">
+            <legend>
+                <div class="legend">
+                    <input type="text" placeholder="Fournisseur" id="Fournisseur">
+                    <input type="text" placeholder="N FACTURE" id="numero">
+                </div>
+                <div>
+                    <p>DOIT</p>
+                </div>
+                <Div class="legend">
+                    <input type="date" placeholder="Date" id="date">
+                    <input type="text" placeholder="CLIENT" id="client">
+                </Div>
+            </legend>
 
-            <p>DOIT</p>
-            <div id="enbas">
-              <input type="numero" name="numero" id="numero" />
-              <input
-                type="text"
-                name="client"
-                id="client"
-                placeholder="Client"
-              />
-            </div>
-          </div>
-          <div class="corps">
-            <section class="elementsfac" id="idncv">
-              <div>
-                <label for="montantht">Montant HT</label>
-                <input type="number" name="montantht" id="montantht" /> <br />
-              </div>
+            <label for="montant_ht">Montant ht</label>
+            <input type="number" name="montant_ht" id="montant_ht" required min="0"><br>
+            <label for="remise">Remise <input type="number" name="remise" id="taux_remise" min="0"></label>
+            <input type="number" name="remise" id="montant_remise" placeholder="=Montant ht*Taux remise"><br>
+            <hr>
 
-              <div>
-                <label for="remise"
-                  >Remise
-                  <input type="number" name="tauxremise" id="tauxremise" />
-                </label>
-                <input type="number" name="remise" id="remise" />
-              </div>
-            </section>
+            <label for="nvc">NCV</label>
+            <input type="number" name="ncv" id="ncv" placeholder="=Montant ht-Remise"><br>
+            <label for="transport">transport</label>
+            <input type="number" name="transport" id="montant_transport" min="0"><br>
+            <hr>
 
-            <section class="elementsfac" id="idncf">
-              <div>
-                <label for="ncv"> NCV</label>
-                <input type="number" name="ncv" id="ncv" /> <br />
-              </div>
+            <label for="NC_facture">NC_facture</label>
+            <input type="number" name="NC_facture" id="nc_facture" placeholder="=NCV+transport"><br>
+            <label for="escompte">escompte  <input type="number" name="escompte" id="taux_escompte" min="0"></label>
+            <input type="number" name="escompte" id="montant_escompte" placeholder="=NC_facture*taux escompte"><br><hr>
 
-              <div>
-                <label for="transport">Transport</label>
-                <input type="number" name="transport" id="transport" />
-              </div>
-            </section>
+            <label for="net_financiere">Net_financiere</label>
+            <input type="number" name="net_financiere" id="net_financiere" placeholder="NC_facture-montant escompte"><br>
+            <label for="tva">TVA <input type="number" name="tva" id="taux_tva" min="0"></label>
+            <input type="number" name="tva" id="montant_tva" placeholder="net_financiere*taux tva"><br>
+            <hr>
 
-            <section class="elementsfac" id="nf">
-              <div>
-                <label for="ncf"> NCF</label>
-                <input type="number" name="ncf" id="ncf" /> <br />
-              </div>
-
-              <div>
-                <label for="escompte"
-                  >Escompte
-                  <input type="number" name="tauxescompte" id="tauxescompte"
-                /></label>
-                <input type="number" name="escompte" id="escompte" />
-              </div>
-            </section>
-
-            <section class="elementsfac" id="total">
-              <div>
-                <label for="totalht">Total HT</label>
-                <input type="number" name="totalht" id="totalht" /> <br />
-              </div>
-<div>
-              <label for="tva"
-                >TVA <input type="number" name="tauxtva" id="tauxtva"
-              /></label>
-              <input type="number" name="tva" id="tva" /> <br />
-              
-            </div>
-              
-             </section>
-
-             <section class="elementsfac"  id="nap">
-              <div>
-
-              <label for="totalttc">Net à payer </label>
-              <input type="number" name="totalttc" id="totalttc" />
-            
-              </div>
-             </section>
-          </div>
+            <label for="nap">NAP</label>
+            <input type="number" name="nap" id="nap" placeholder="net_financiere+montant tva"><br>
         </div>
-      </div>
+        <button type="submit"><img src="fleche-droite.png" alt=""></button>
+    </form>
+    
+    <div class="tableau">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Montant ht</th>
+                    <th>NCF</th>
+                    <th>NF</th>
+                    <th>NAP</th>
+                </tr>
+            </thead>
+            <tbody id="table">
 
-      <button id="roundmidbtn">
-      +
-      </button>
-
-
-      <div class="mesdivs" id="droite"></div>
+            </tbody>
+        </table>
     </div>
-  </body>
+</body>
+
 </html>
