@@ -1,3 +1,4 @@
+
 html {
     background-color: aqua;
 }
@@ -5,42 +6,44 @@ html {
 #main {
     display: flex;
     flex-direction: row;
+    height: 100vh;
     flex-wrap: wrap;
 
 }
 
 #gauche {
     background-color: lightgrey;
-    flex:2;
+    flex: 2;
 }
 
 #droite {
     background-color: white;
-    flex:3;
+    flex: 3;
 }
 
 .mesdivs {
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
-} 
+}
 
-#entete{
+#entete {
     display: flex;
     flex-direction: column;
     background-color: beige;
     padding: 10px;
 }
 
-#entete > p {
+#entete>p {
     align-self: center;
 }
 
-#enhaut{
+#enhaut {
     display: flex;
     justify-content: space-between;
 }
-#enbas{
+
+#enbas {
     display: flex;
     justify-content: space-between;
 }
@@ -56,39 +59,86 @@ html {
 
 }
 
-.elementsfac > div {
+.elementsfac>div {
     display: flex;
-    margin-bottom: 5px;
     justify-content: space-between;
 }
 
-.elementsfac > div > input{
-    width: 50%;
-}
-
-.elementsfac > div > label{
-    width: 50%;
-}
-
-
- 
-input[name="tauxremise"], input[name="tauxescompte"], input[name="tauxtva"] {
+input[name="tauxremise"] {
     width: 35px;
 }
 
-#nap {
+.arrow-button {
+    position: relative;
+    bottom: 40px;
+    right: 8px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #500fca;
     border: none;
+    cursor: pointer;
+    top: 300px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
 }
 
-#roundmidbtn{
+.arrow-button:hover {
+    background: #928e89;
+    transform: scale(1.05);
+}
 
-    position: absolute;
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    top: 50%;
-    background-color: aqua;
-    border: 1px solid;
+.arrow-button svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
 
+.calculation-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+
+.table-panel {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #b8a896;
+}
+
+th {
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+td {
+    padding: 15px;
+    color: #666;
 }
