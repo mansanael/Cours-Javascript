@@ -59,6 +59,7 @@ td{
 }
 table{
     border-collapse: collapse;
+    max-height: 580px;
 }
 button{
     background-color: rgba(0, 0, 0, 0.5);
@@ -80,4 +81,6 @@ input:focus{
     border-radius: 10px;
     box-shadow: 0 0 5px black;
     text-align: center;
+    max-height: 580px;
+    overflow-y: auto;
 }

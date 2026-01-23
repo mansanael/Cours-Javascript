@@ -26,7 +26,7 @@ window.onload=function(){
         let remisePourcentage = parseFloat(this.value) || 0;
         
         let montantRemise = montantHT * (remisePourcentage / 100);
-        let montantNCV = document.getElementById("ncv").value;
+        let montantNCV = montantHT - montantRemise;
 
         document.getElementById("montant_remise").value = montantRemise.toFixed(0);
         document.getElementById("ncv").value = montantNCV.toFixed(0);
@@ -91,5 +91,5 @@ let form = document.getElementById("formulaire").addEventListener("submit", func
     ;
     table.appendChild(ligne);
     
-    form.reset()
+    form.reset();
 });
