@@ -21,6 +21,7 @@ window.onload = function() {
         let transport = document.getElementById("transport").value || 0;
 
         document.getElementById("ncf").value = (parseFloat(montantNCV) + parseFloat(transport)).toFixed(2);
+        console.log(transport);
   }
 
   calculTotalHorsTaxe = function(){
@@ -39,12 +40,8 @@ window.onload = function() {
     // On met le numéro de facture automatique en utilisant DAAMJ avec AA les deux derniers chiffres de l'année, MM le mois et JJ le jour
     let numeroFacture = `D${annee.toString().slice(-2)}${mois}${jour}`;
     document.getElementById("numero").value = numeroFacture;
-
     document.getElementById("montantht").addEventListener("input",  calculncv );
-
     document.getElementById("tauxremise").addEventListener("input", calculncv );
-
     document.getElementById("transport").addEventListener("input", calculncf );
-
     document.getElementById("tauxescompte").addEventListener("input", calculTotalHorsTaxe);
 };
