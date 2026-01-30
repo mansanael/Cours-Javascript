@@ -27,6 +27,30 @@ window.onload = function() {
          document.getElementById("ncf").value = (parseFloat(montantNCV) + parseFloat(transport)).toFixed(2);
   }
 
+  function calculNAP() {
+    let totalHTVal = parseFloat(totalht.value) || 0;
+    let tauxTVA = parseFloat(tauxtva.value) || 0;
+
+    let tvaVal = totalHTVal * (tauxTVA / 100);
+    let ttcVal = totalHTVal + tvaVal;
+
+    tva.value = tvaVal.toFixed(2);
+    totalttc.value = ttcVal.toFixed(2);
+}
+
+
+ /* ================= TOTAL HT + ESCOMPTE ================= */
+ function calculTotalHT() {
+    let ncfVal = parseFloat(ncf.value) || 0;
+    let tauxEsc = parseFloat(tauxescompte.value) || 0;
+
+    let escompteVal = ncfVal * (tauxEsc / 100);
+    let totalHTVal = ncfVal - escompteVal;
+
+    escompte.value = escompteVal.toFixed(2);
+    totalht.value = totalHTVal.toFixed(2);
+
+}
     // On recupère le champ date et on lui assigne la date formatée
     document.getElementById("date").value = `${annee}-${mois}-${jour}`;
 
@@ -39,4 +63,28 @@ window.onload = function() {
     document.getElementById("tauxremise").addEventListener("input", calculncv );
 
     document.getElementById("transport").addEventListener("input", calculncf );
+
+    tauxescompte.addEventListener("input", calculTotalHT);
+    tauxtva.addEventListener("input", calculNAP);
+
+    const form = document.getElementById("formulaire");
+    const tbody = document.getElementById("tbody");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let tr = document.createElement("tr");
+
+        tr.innerHTML = `
+            <td>${parseFloat(montantht.value).toFixed(2)}</td>
+            <td>${parseFloat(ncf.value).toFixed(2)}</td>
+            <td>${parseFloat(escompte.value).toFixed(2)}</td>
+            <td>${parseFloat(totalttc.value).toFixed(2)}</td>
+        `;
+
+        tbody.appendChild(tr);
+    });
+
+
 };
+
