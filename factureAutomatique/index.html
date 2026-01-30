@@ -35,80 +35,68 @@
           </div>
           <div class="corps">
             <section class="elementsfac" id="idncv">
-              <div>
+              <div class="montantht">
                 <label for="montantht">Montant HT</label>
                 <input type="number" name="montantht" id="montantht" /> <br />
               </div>
-
-              <div>
+              <div class="remise">
                 <label for="remise"
-                  >Remise
-                  <input type="number" name="tauxremise" id="tauxremise" />
-                </label>
-                <input type="number" name="remise" id="remise" />
-              </div>
+                >Remise
+                <input type="number" name="tauxremise" id="tauxremise" />
+              </label>
+              <input type="number" name="remise" id="remise" />
+            </div> 
             </section>
-
-            <section class="elementsfac" id="idncf">
-              <div>
+            <section class="elementsfac" id="ncf">
+              <div class="ncv">
                 <label for="ncv"> NCV</label>
-                <input type="number" name="ncv" id="ncv" /> <br />
+              <input type="number" name="ncv" id="ncv" /> <br />
               </div>
-
-              <div>
+              <div class="transport">
                 <label for="transport">Transport</label>
-                <input type="number" name="transport" id="transport" />
-              </div>
+              <input type="number" name="transport" id="transport" />
+              </div> 
             </section>
-
             <section class="elementsfac" id="nf">
-              <div>
+              <div class="ncf">
                 <label for="ncf"> NCF</label>
-                <input type="number" name="ncf" id="ncf" /> <br />
+              <input type="number" name="ncf" id="ncf" /> <br />
               </div>
-
-              <div>
+              <div class="escompte">
                 <label for="escompte"
-                  >Escompte
-                  <input type="number" name="tauxescompte" id="tauxescompte"
-                /></label>
-                <input type="number" name="escompte" id="escompte" />
+                >Escompte
+                <input type="number" name="tauxescompte" id="tauxescompte"
+              /></label>
+              <input type="number" name="escompte" id="escompte" />
               </div>
             </section>
-
             <section class="elementsfac" id="total">
-              <div>
+              <div class="totalht">
                 <label for="totalht">Total HT</label>
-                <input type="number" name="totalht" id="totalht" /> <br />
+              <input type="number" name="totalht" id="totalht" /> <br />
               </div>
-<div>
-              <label for="tva"
+              <div class="tva">
+                <label for="tva"
                 >TVA <input type="number" name="tauxtva" id="tauxtva"
               /></label>
               <input type="number" name="tva" id="tva" /> <br />
-              
-            </div>
-              
-             </section>
-
-             <section class="elementsfac"  id="nap">
-              <div>
-
-              <label for="totalttc">Net à payer </label>
-              <input type="number" name="totalttc" id="totalttc" />
-            
+               <hr />
               </div>
-             </section>
+            </section>
+            <section class="elementsfac" id="total">
+              <div class="totalttc">
+                <label for="totalttc">Total TTC</label>
+              <input type="number" name="totalttc" id="totalttc" />
+              </div>
+            </section>
           </div>
         </div>
       </div>
-
       <button id="roundmidbtn">
-      +
+       >
       </button>
-
-
       <div class="mesdivs" id="droite"></div>
     </div>
   </body>
 </html>
+

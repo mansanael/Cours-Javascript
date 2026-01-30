@@ -9,24 +9,6 @@ window.onload = function() {
     let mois = (aujourdui.getMonth() + 1).toString().padStart(2, '0'); // Les mois commencent à 0
     let annee = aujourdui.getFullYear();
 
-    calculncv = function() {
-        let montantHT = document.getElementById("montantht").value || 0;
-        let remisePourcentage = parseFloat(document.getElementById("tauxremise").value) || 0;
-        console.log("Remise : " + remisePourcentage);
-        let montantRemise = montantHT * (remisePourcentage / 100);
-        let montantNCV = montantHT - montantRemise;
-
-        document.getElementById("remise").value = montantRemise.toFixed(2);
-        document.getElementById("ncv").value = montantNCV.toFixed(2);
-    }
-
-    calculncf = function(){
-        let montantNCV = document.getElementById("ncv").value || 0;
-        let transport = document.getElementById("transport").value || 0;
-
-         document.getElementById("ncf").value = (parseFloat(montantNCV) + parseFloat(transport)).toFixed(2);
-  }
-
     // On recupère le champ date et on lui assigne la date formatée
     document.getElementById("date").value = `${annee}-${mois}-${jour}`;
 
@@ -34,9 +16,32 @@ window.onload = function() {
     let numeroFacture = `D${annee.toString().slice(-2)}${mois}${jour}`;
     document.getElementById("numero").value = numeroFacture;
 
-    document.getElementById("montantht").addEventListener("input",  calculncv );
+    // Quand le montant ht est donné on calcule le montant de la remise et le montant ncv
+    document.getElementById("montantht").addEventListener("input", function() {
+        let montantHT = parseFloat(this.value);
+        let remisePourcentage = parseFloat(document.getElementById("tauxremise").value) || 0;
+        console.log("Remise : " + remisePourcentage);
+        let montantRemise = montantHT * (remisePourcentage / 100);
+        let montantNCV = montantHT - montantRemise;
 
-    document.getElementById("tauxremise").addEventListener("input", calculncv );
+        document.getElementById("remise").value = montantRemise.toFixed(2);
+        document.getElementById("ncv").value = montantNCV.toFixed(2);
+    });
 
-    document.getElementById("transport").addEventListener("input", calculncf );
+    document.getElementById("tauxremise").addEventListener("input", function() {
+        let montantHT = parseFloat(document.getElementById("montantht").value) || 0;
+        let remisePourcentage = parseFloat(this.value) || 0;
+        console.log("Remise : " + remisePourcentage);
+        let montantRemise = montantHT * (remisePourcentage / 100);
+        let montantNCV = montantHT - montantRemise;
+
+        document.getElementById("remise").value = montantRemise.toFixed(2);
+        document.getElementById("ncv").value = montantNCV.toFixed(2);
+    }
+ );
 };
+
+
+
+
+
