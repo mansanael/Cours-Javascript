@@ -36,6 +36,15 @@ window.onload = function() {
         document.getElementById("totalht").value=parseFloat(ncf)-parseFloat(escompte);
     }
 
+    calculNetAPayer=function(){
+        let ncf=document.getElementById("ncf").value || 0;
+        let tauxTva=document.getElementById("tauxtva").value || 0;
+        let montantTva=parseFloat(ncf)*tauxTva/100;
+        
+        document.getElementById("tva").value=montantTva.toFixed(2);
+        document.getElementById("totalttc").value=parseFloat(ncf)-parseFloat(montantTva);
+    }
+
     // On recupère le champ date et on lui assigne la date formatée
     document.getElementById("date").value = `${annee}-${mois}-${jour}`;
 
@@ -50,4 +59,6 @@ window.onload = function() {
     document.getElementById("transport").addEventListener("input", calculncf );
 
     document.getElementById("tauxescompte").addEventListener("input",calculTotalHorsTaxe);
+
+    document.getElementById("tauxtva").addEventListener("input",calculNetAPayer);
 }
