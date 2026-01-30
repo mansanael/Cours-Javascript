@@ -26,29 +26,29 @@
 
             <label for="montant_ht">Montant ht</label>
             <input type="number" name="montant_ht" id="montant_ht" required min="0"><br>
-            <label for="remise">Remise <input type="number" name="remise" id="taux_remise" min="0"></label>
-            <input type="number" name="remise" id="montant_remise" placeholder="=Montant ht*Taux remise"><br>
+            <label for="remise">Remise <input type="number" name="remise" id="taux_remise"></label>
+            <input type="number" name="remise" id="montant_remise" placeholder="=Montant ht*Taux remise" min="0"><br>
             <hr>
 
             <label for="nvc">NCV</label>
-            <input type="number" name="ncv" id="ncv" placeholder="=Montant ht-Remise"><br>
+            <input type="number" name="ncv" id="ncv" placeholder="=Montant ht-Remise" min="0"><br>
             <label for="transport">transport</label>
             <input type="number" name="transport" id="montant_transport" min="0"><br>
             <hr>
 
             <label for="NC_facture">NC_facture</label>
-            <input type="number" name="NC_facture" id="nc_facture" placeholder="=NCV+transport"><br>
+            <input type="number" name="NC_facture" id="nc_facture" placeholder="=NCV+transport" min="0"><br>
             <label for="escompte">escompte  <input type="number" name="escompte" id="taux_escompte" min="0"></label>
-            <input type="number" name="escompte" id="montant_escompte" placeholder="=NC_facture*taux escompte"><br><hr>
+            <input type="number" name="escompte" id="montant_escompte" placeholder="=NC_facture*taux escompte" min="0"><br><hr>
 
             <label for="net_financiere">Net_financiere</label>
-            <input type="number" name="net_financiere" id="net_financiere" placeholder="NC_facture-montant escompte"><br>
+            <input type="number" name="net_financiere" id="net_financiere" placeholder="NC_facture-montant escompte" min="0"><br>
             <label for="tva">TVA <input type="number" name="tva" id="taux_tva" min="0"></label>
-            <input type="number" name="tva" id="montant_tva" placeholder="net_financiere*taux tva"><br>
+            <input type="number" name="tva" id="montant_tva" placeholder="net_financiere*taux tva" min="0"><br>
             <hr>
 
             <label for="nap">NAP</label>
-            <input type="number" name="nap" id="nap" placeholder="net_financiere+montant tva"><br>
+            <input type="number" name="nap" id="nap" placeholder="net_financiere+montant tva" min="0"><br>
         </div>
         <button type="submit"><img src="fleche-droite.png" alt=""></button>
     </form>
