@@ -67,7 +67,8 @@ window.onload=function(){
         document.getElementById("nap").value = nap.toFixed(0);
     });
     
-let form = document.getElementById("formulaire").addEventListener("submit", function(e){
+let form = document.getElementById("formulaire");
+form.addEventListener("submit", function(e){
     e.preventDefault();
 
     const montant_ht=document.getElementById("montant_ht").value;
