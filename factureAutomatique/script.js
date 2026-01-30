@@ -26,6 +26,16 @@ window.onload = function() {
 
          document.getElementById("ncf").value = (parseFloat(montantNCV) + parseFloat(transport)).toFixed(2);
   }
+  calcultotalmontantht=function(){
+    let ncf= document.getElementById("ncf").value ||0;
+    let taux = parseFloat(document.getElementById("tauxescompte").value);
+    let escompte=parseFloat(ncf)*taux/100;
+
+    document.getElementById("escompte").value=escompte;
+
+    document.getElementById("totalht").value=parseFloat(ncf)-parseFloat(escompte);
+    
+  }
 
     // On recupère le champ date et on lui assigne la date formatée
     document.getElementById("date").value = `${annee}-${mois}-${jour}`;
@@ -39,4 +49,7 @@ window.onload = function() {
     document.getElementById("tauxremise").addEventListener("input", calculncv );
 
     document.getElementById("transport").addEventListener("input", calculncf );
+
+    document.getElementById("tauxescompte").addEventListener("input",calcultotalmontantht)
+
 };
