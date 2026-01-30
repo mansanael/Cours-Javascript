@@ -51,10 +51,6 @@ window.onload = function() {
     totalht.value = totalHTVal.toFixed(2);
 
 }
-
-
-
-
     // On recupère le champ date et on lui assigne la date formatée
     document.getElementById("date").value = `${annee}-${mois}-${jour}`;
 
