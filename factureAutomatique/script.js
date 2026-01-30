@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 // On met la date du jour dans le champ "date" du formulaire 
 window.onload = function() {
     // On  prend la date du jour et on l'affiche dans le champ "date"
@@ -61,4 +63,5 @@ window.onload = function() {
     document.getElementById("tauxescompte").addEventListener("input",calculTotalHorsTaxe);
 
     document.getElementById("tauxtva").addEventListener("input",calculNetAPayer);
+
 }

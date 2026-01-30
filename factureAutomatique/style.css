@@ -6,7 +6,6 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 
 #gauche {
@@ -77,13 +76,28 @@ input[name="tauxremise"], input[name="tauxescompte"], input[name="tauxtva"] {
 }
 
 #roundmidbtn{
-    position: absolute;
     border-radius: 100%;
+    position: absolute;
     height: 50px;
     width: 50px;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 45%;
     background-color: aqua;
     border: 1px solid;
+    cursor: pointer;
+}
 
+th{
+    padding: 10px;
+    background-color: rgb(50, 148, 205);
+    border: 1px solid rgb(49, 45, 45);
+}
+td{
+    padding: 10px;
+    border: 1px solid rgb(49, 45, 45);
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 20%;
 }

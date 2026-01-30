@@ -7,108 +7,124 @@
     <script src="script.js"></script>
     <title>Facture Automatique </title>
   </head>
-  <body>
+<body>
     <div id="main">
-      <div class="mesdivs" id="gauche">
-        <div id="facture">
-          <div id="entete">
-            <div id="enhaut">
-              <input
-                type="text"
-                name="fournisseur"
-                id="fournisseur"
-                placeholder="Fournisseur"
-              />
-              <input type="date" name="date" id="date" />
-            </div>
+        <div class="mesdivs" id="gauche">
+            <div id="facture">
+                <div id="entete">
+                    <div id="enhaut">
+                        <input
+                        type="text"
+                        name="fournisseur"
+                        id="fournisseur"
+                        placeholder="Fournisseur"
+                        />
+                        <input type="date" name="date" id="date" />
+                    </div>
 
-            <p>DOIT</p>
-            <div id="enbas">
-              <input type="numero" name="numero" id="numero" />
-              <input
-                type="text"
-                name="client"
-                id="client"
-                placeholder="Client"
-              />
-            </div>
-          </div>
-          <div class="corps">
-            <section class="elementsfac" id="idncv">
-              <div>
-                <label for="montantht">Montant HT</label>
-                <input type="number" name="montantht" id="montantht" /> <br />
-              </div>
+                    <p>DOIT</p>
+                    <div id="enbas">
+                        <input type="numero" name="numero" id="numero" />
+                        <input
+                        type="text"
+                        name="client"
+                        id="client"
+                        placeholder="Client"
+                        />
+                    </div>
+                </div>
+                <div class="corps">
+                    <section class="elementsfac" id="idncv">
+                        <div>
+                            <label for="montantht">Montant HT</label>
+                            <input type="number" name="montantht" id="montantht" /> <br />
+                        </div>
 
-              <div>
-                <label for="remise"
-                  >Remise
-                  <input type="number" name="tauxremise" id="tauxremise" />
-                </label>
-                <input type="number" name="remise" id="remise" />
-              </div>
-            </section>
+                        <div>
+                            <label for="remise"
+                            >Remise
+                                <input type="number" name="tauxremise" id="tauxremise" />
+                            </label>
+                            <input type="number" name="remise" id="remise" />
+                        </div>
+                    </section>
 
-            <section class="elementsfac" id="idncf">
-              <div>
-                <label for="ncv"> NCV</label>
-                <input type="number" name="ncv" id="ncv" /> <br />
-              </div>
+                    <section class="elementsfac" id="idncf">
+                        <div>
+                            <label for="ncv"> NCV</label>
+                            <input type="number" name="ncv" id="ncv" /> <br />
+                        </div>
 
-              <div>
-                <label for="transport">Transport</label>
-                <input type="number" name="transport" id="transport" />
-              </div>
-            </section>
+                        <div>
+                            <label for="transport">Transport</label>
+                            <input type="number" name="transport" id="transport" />
+                        </div>
+                    </section>
 
-            <section class="elementsfac" id="nf">
-              <div>
-                <label for="ncf"> NCF</label>
-                <input type="number" name="ncf" id="ncf" /> <br />
-              </div>
+                    <section class="elementsfac" id="nf">
+                        <div>
+                            <label for="ncf"> NCF</label>
+                            <input type="number" name="ncf" id="ncf" /> <br />
+                        </div>
 
-              <div>
-                <label for="escompte"
-                  >Escompte
-                  <input type="number" name="tauxescompte" id="tauxescompte"
-                /></label>
-                <input type="number" name="escompte" id="escompte" />
-              </div>
-            </section>
+                        <div>
+                            <label for="escompte"
+                            >Escompte
+                            <input type="number" name="tauxescompte" id="tauxescompte"
+                            /></label>
+                            <input type="number" name="escompte" id="escompte" />
+                        </div>
+                    </section>
 
-            <section class="elementsfac" id="total">
-              <div>
-                <label for="totalht">Total HT</label>
-                <input type="number" name="totalht" id="totalht" /> <br />
-              </div>
-            <div>
-              <label for="tva"
-                >TVA <input type="number" name="tauxtva" id="tauxtva"
-              /></label>
-              <input type="number" name="tva" id="tva" /> <br />
+                    <section class="elementsfac" id="total">
+                        <div>
+                            <label for="totalht">Total HT</label>
+                            <input type="number" name="totalht" id="totalht" /> <br />
+                        </div>
+                        <div>
+                            <label for="tva"
+                                >TVA <input type="number" name="tauxtva" id="tauxtva"
+                            /></label>
+                            <input type="number" name="tva" id="tva" /> <br />
+                        </div>
               
+                    </section>
+
+                    <section class="elementsfac"  id="nap">
+                        <div>
+
+                        <label for="totalttc">Net à payer </label>
+                        <input type="number" name="totalttc" id="totalttc" />
+
+                        </div>
+                    </section>
+                </div>
             </div>
-              
-             </section>
-
-             <section class="elementsfac"  id="nap">
-              <div>
-
-              <label for="totalttc">Net à payer </label>
-              <input type="number" name="totalttc" id="totalttc" />
-            
-              </div>
-             </section>
-          </div>
         </div>
-      </div>
 
-      <button id="roundmidbtn">
-      +
-      </button>
+        <button id="roundmidbtn">
+        +
+        </button>
 
 
-      <div class="mesdivs" id="droite"></div>
+        <div class="mesdivs" id="droite">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Montantht</th>
+                        <th>NCF</th>
+                        <th>NF</th>
+                        <th>NAP</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+            
+        </div>
     </div>
-  </body>
+</body>
 </html>
