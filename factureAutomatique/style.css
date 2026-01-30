@@ -1,94 +1,125 @@
-html {
+body {
+    margin: 0;
+    padding: 0;
     background-color: aqua;
 }
 
 #main {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
 }
 
 #gauche {
-    background-color: lightgrey;
-    flex:2;
+    background-color: lightgray;
+    flex: 2;
+    height: 55vh;
+
 }
 
 #droite {
     background-color: white;
-    flex:3;
+    flex: 3;
+    height: 30vh;
+    margin-top: 8%;
 }
-
+.btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-top: 15%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: aquamarine;
+}
 .mesdivs {
     border: 1px solid black;
     margin: 10px;
     padding: 10px;
-} 
-
-#entete{
+}
+#facture{
+    background-color: aqua;
+}
+#entete {
     display: flex;
     flex-direction: column;
-    background-color: beige;
+    background-color: aqua;
     padding: 10px;
+    color: white;
 }
 
-#entete > p {
+#enmilieu {
     align-self: center;
 }
 
-#enhaut{
-    display: flex;
-    justify-content: space-between;
-}
-#enbas{
+#enhaut {
     display: flex;
     justify-content: space-between;
 }
 
-.elementsfac {
+#enbas {
+    display: flex;
+    justify-content: space-between;
+}
+
+#tableau {
     display: flex;
     flex-direction: column;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
-    margin: 10px;
-
-
+    background-color: aqua;
 }
 
-.elementsfac > div {
+#MONTANT {
     display: flex;
-    margin-bottom: 5px;
     justify-content: space-between;
 }
 
-.elementsfac > div > input{
-    width: 50%;
+#REMISE {
+                display: flex;
+                justify-content: space-between;
 }
-
-.elementsfac > div > label{
-    width: 50%;
+#ncv {
+                display: flex;
+                justify-content: space-between;
 }
-
-
- 
-input[name="tauxremise"], input[name="tauxescompte"], input[name="tauxtva"] {
-    width: 35px;
+#tva {
+                display: flex;
+                justify-content: space-between;
 }
-
-#nap {
-    border: none;
+#TRANSPORT {
+                display: flex;
+                justify-content: space-between;
 }
-
-#roundmidbtn{
-
-    position: absolute;
-    border-radius: 100%;
-    height: 50px;
-    width: 50px;
-    left: 50%;
-    top: 50%;
+#ESCOMPTE {
+                display: flex;
+                justify-content: space-between;
+}
+#NC-facture{
+                display: flex;
+                justify-content: space-between;
+}
+#net-Financier{
+                display: flex;
+                justify-content: space-between;
+}   
+#nap{
+                display: flex;
+                justify-content: space-between;
+}
+table{
+    border: 2px solid  black;
+    width: 100%;
     background-color: aqua;
-    border: 1px solid;
-
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+#supprimer-facture {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#pourcentage-remise , #escompte-valeur , #tva-valeur{
+    width: 60px;
 }
