@@ -34,10 +34,8 @@ window.onload = function() {
         
         document.getElementById("escompte").value=escompte.toFixed(2);
         document.getElementById("totalht").value=parseFloat(ncf)-parseFloat(escompte);
-
     }
 
-    
     // On recupère le champ date et on lui assigne la date formatée
     document.getElementById("date").value = `${annee}-${mois}-${jour}`;
 
@@ -52,4 +50,4 @@ window.onload = function() {
     document.getElementById("transport").addEventListener("input", calculncf );
 
     document.getElementById("tauxescompte").addEventListener("input",calculTotalHorsTaxe);
-};
+}
