@@ -16,6 +16,8 @@ html {
 #droite {
     background-color: white;
     flex:3;
+    max-height: 550px;
+    overflow-y: auto;
 }
 
 .mesdivs {
