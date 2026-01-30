@@ -10,6 +10,7 @@
   <body>
     <div id="main">
       <div class="mesdivs" id="gauche">
+        <form id="formulaire">
         <div id="facture">
           <div id="entete">
             <div id="enhaut">
@@ -101,14 +102,29 @@
              </section>
           </div>
         </div>
+     
       </div>
 
-      <button id="roundmidbtn">
-      +
+      <button id="roundmidbtn" type="submit">
+      afficher
       </button>
+    </form>
+         <!-- ===== PARTIE DROITE ===== -->
+    <div id="droite">
+      <table width="100%">
+          <thead>
+              <tr>
+                  <th>Montant HT</th>
+                  <th>NCF</th>
+                  <th>NF</th>
+                  <th>NAP</th>
+              </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+      </table>
+  </div>
 
-
-      <div class="mesdivs" id="droite"></div>
+      </div>
     </div>
   </body>
 </html>

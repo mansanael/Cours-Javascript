@@ -92,3 +92,24 @@ input[name="tauxremise"], input[name="tauxescompte"], input[name="tauxtva"] {
     border: 1px solid;
 
 }
+/* ===== DROITE ===== */
+#droite{
+    background-color: white;
+    flex: 3;
+    height: 100vh;
+    margin-left: 20px;
+    border: 2px solid black;
+    padding: 20px;
+}
+/* ===== TABLE ===== */
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
